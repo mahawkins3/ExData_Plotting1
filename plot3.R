@@ -14,7 +14,7 @@ data <- cbind(dates, data[, 2:8])
 colnames(data)[1] <- "Timestamp"
 
 #Plot 3 lines showing Energy sub metering over the course of the two days, with legend identifying each of the three sub_metering results
-plot(data$Timestamp, data$Sub_metering_1, type = "l", xlab = "", ylab = "Engergy sub metering")
+plot(data$Timestamp, data$Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering")
 lines(data$Timestamp, data$Sub_metering_2, type = "l", col = "green")
 lines(data$Timestamp, data$Sub_metering_3, type = "l", col = "blue")
 legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","green","blue"), lty=1)
